@@ -7,7 +7,7 @@ package pcassistant;
 
 /**
  *
- * @author Roman 
+ * @author Roman
  */
 public class PCAssistant {
 
@@ -16,6 +16,11 @@ public class PCAssistant {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        CommandBuilder commandbuilder = CommandBuilder.GetInstance();
+        while (commandbuilder.HasNextCommand()) {
+            ICommand command = commandbuilder.GetNextCommand();
+            command.Execute();
+        }
     }
-    
+
 }
