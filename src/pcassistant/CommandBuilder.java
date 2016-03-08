@@ -7,13 +7,14 @@ package pcassistant;
 
 /**
  *
- * @author ТРОЛЬ
+ * @author РўР РћР›Р¬
  */
 public class CommandBuilder {
 
     private static CommandBuilder instance = new CommandBuilder();
+    String command;
 
-    private CommandBuilder() //конструктор 
+    private CommandBuilder() //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 
     {
 
     }
@@ -23,10 +24,20 @@ public class CommandBuilder {
     }
 
     public boolean HasNextCommand() {
+        command = UserCommandListener.GetInstance().GetNextRequest();
+        if (command != null) {
+            return true;
+        }
         return false;
     }
 
     public ICommand GetNextCommand() {
-        return null;
+    switch(command)
+    {
+        case "1":  return new SayHelloCommand();
+        default : return new SaySomethingElse(command);
     }
+       
+    }
+
 }
