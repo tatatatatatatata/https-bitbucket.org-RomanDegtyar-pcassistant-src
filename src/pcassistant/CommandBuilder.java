@@ -40,6 +40,7 @@ public class CommandBuilder {
         case "4": return new SearchKittens();
         case "5": return new ComputerOff(param);
         case "6": return new ComputerRstart();
+        case "7": return new OpenProgramm();
         default : return new SaySomethingElse(param);
     }
        
