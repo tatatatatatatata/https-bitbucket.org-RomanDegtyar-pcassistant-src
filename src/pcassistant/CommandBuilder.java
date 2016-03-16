@@ -12,7 +12,7 @@ package pcassistant;
 public class CommandBuilder {
 
     private static CommandBuilder instance = new CommandBuilder();
-    String command;
+    String param;
 
     private CommandBuilder() //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ 
     {
@@ -24,18 +24,23 @@ public class CommandBuilder {
     }
 
     public boolean HasNextCommand() {
-        command = UserCommandListener.GetInstance().GetNextRequest();
-        if (command != null) {
+        param = UserCommandListener.GetInstance().GetNextRequest();
+        if (param != null) {
             return true;
         }
         return false;
     }
 
     public ICommand GetNextCommand() {
-    switch(command)
+    switch(param)
     {
         case "1":  return new SayHelloCommand();
-        default : return new SaySomethingElse(command);
+        case "2":  return new tellJock();
+        case "3":  return new TellTime();
+        case "4": return new SearchKittens();
+        case "5": return new ComputerOff(param);
+        case "6": return new ComputerRstart();
+        default : return new SaySomethingElse(param);
     }
        
     }
