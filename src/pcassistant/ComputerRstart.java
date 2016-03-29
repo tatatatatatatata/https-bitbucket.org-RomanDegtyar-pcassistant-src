@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class ComputerRstart implements ICommand{
        public void Execute() {
-       String[] commands = { "shutdown", "/r /p"};
+       String[] commands = { "shutdown", "/r"};
        try {
            Runtime.getRuntime().exec(commands);
        } catch (IOException ex) {

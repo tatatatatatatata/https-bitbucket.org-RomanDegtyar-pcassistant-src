@@ -20,7 +20,7 @@ public class ComputerOff implements ICommand{
         this.times = times;//Запилить считывание времени отдельно(как отдельной переменной)
     }
    public void Execute() {
-       String[] commands = { "shutdown", "/t " + times };
+       String[] commands = { "shutdown", "/s" };
        try {
            Runtime.getRuntime().exec(commands);
        } catch (IOException ex) {
