@@ -41,6 +41,7 @@ public class CommandBuilder {
         case "5": return new ComputerOff(param);
         case "6": return new ComputerRstart();
         case "7": return new OpenProgramm();
+        case "8": return new Go_Cats();
         default : return new SaySomethingElse(param);
     }
        

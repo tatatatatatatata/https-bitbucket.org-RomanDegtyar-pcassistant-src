@@ -11,4 +11,4 @@ package pcassistant;
  */
 public interface ICommand {
     public void Execute ();
- }
+  }
