@@ -1,0 +1,2 @@
+grammar test;
+public <simple> = hello | jock | time | off | shutdown | open | cat | kitten;

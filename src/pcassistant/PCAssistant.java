@@ -7,7 +7,7 @@ package pcassistant;
 
 /**
  *
- * @author Roman
+ * @author 
  */
 public class PCAssistant {
 

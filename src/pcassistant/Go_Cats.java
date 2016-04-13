@@ -18,11 +18,11 @@ public class Go_Cats implements ICommand{
  //class myURL {
 public void Execute() {
         try {
-             File htmlFile = new File("D:\\kittens.html");
+             File htmlFile = new File("D:\\10Sem\\PC_Asistent\\pcassistant\\pcassistant\\kittens hugging.htm");
             Desktop.getDesktop().browse(htmlFile.toURI());
             
         } catch (IOException ex) {
-            System.out.println("Я не правильно отработал, мне можно а вам нельзя. Бе-бе-бе");
+            System.out.println("Я неправильно отработал, мне можно а вам нельзя. Бе-бе-бе");
         }
     }
 }

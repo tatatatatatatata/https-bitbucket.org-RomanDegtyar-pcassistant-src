@@ -22,8 +22,7 @@ public class OpenProgramm implements ICommand {
             String programPath = Table_Pgogr.NameToPath("Skype");
             Runtime.getRuntime().exec(programPath);
         } catch (IOException ex) {
-            System.out.println("Я не правильно отработал, мне можно а вам нельзя. Бе-бе-бе");
+            System.out.println("Я неправильно отработал, мне можно а вам нельзя. Бе-бе-бе");
         }
     }
-
 }

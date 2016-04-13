@@ -34,14 +34,14 @@ public class CommandBuilder {
     public ICommand GetNextCommand() {
     switch(param)
     {
-        case "1":  return new SayHelloCommand();
-        case "2":  return new tellJock();
-        case "3":  return new TellTime();
-        case "4": return new SearchKittens();
-        case "5": return new ComputerOff(param);
-        case "6": return new ComputerRstart();
-        case "7": return new OpenProgramm();
-        case "8": return new Go_Cats();
+        case "hello":  return new SayHelloCommand();
+        case "jock":  return new tellJock();
+        case "time":  return new TellTime();
+        //case "off": return new ComputerOff(param);
+        //case "shutdown": return new ComputerOff(param);
+        case "5": return new ComputerRstart();
+        case "open": return new OpenProgramm();
+        case "cat": return new Go_Cats();
         default : return new SaySomethingElse(param);
     }
        
