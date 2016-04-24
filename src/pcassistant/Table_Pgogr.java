@@ -18,6 +18,7 @@ public class Table_Pgogr {
     {  
         Map <String, String> Table = new HashMap<>();
         Table.put("Skype", "C:/...");
+        
                
         return Table.get(programName);
     }

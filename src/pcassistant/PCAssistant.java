@@ -11,16 +11,16 @@ package pcassistant;
  */
 public class PCAssistant {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        CommandBuilder commandbuilder = CommandBuilder.GetInstance();
-        while (commandbuilder.HasNextCommand()) {
-            ICommand command = commandbuilder.GetNextCommand();
-            command.Execute();
-        }
-    }
+/**
+* @param args the command line arguments
+*/
+public static void main(String[] args) {
+// TODO code application logic here
+CommandBuilder commandbuilder = CommandBuilder.GetInstance();
+while (commandbuilder.HasNextCommand()) {
+ICommand command = commandbuilder.GetNextCommand();
+command.Execute();
+}
+}
 
 }

@@ -19,10 +19,12 @@ public class OpenProgramm implements ICommand {
 
     public void Execute() {
         try {
-            String programPath = Table_Pgogr.NameToPath("Skype");
-            Runtime.getRuntime().exec(programPath);
+             
+            //String programPath = Table_Pgogr.NameToPath("Skype");
+           // Runtime.getRuntime().exec(programPath);
+            Runtime.getRuntime().exec("calc");
         } catch (IOException ex) {
-            System.out.println("Я неправильно отработал, мне можно а вам нельзя. Бе-бе-бе");
+            System.out.println("Я неправильно открыл программу, проблеммы в классе открытия задач.");
         }
     }
 }

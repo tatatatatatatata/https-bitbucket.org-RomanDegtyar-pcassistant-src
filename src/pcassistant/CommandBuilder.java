@@ -39,12 +39,11 @@ public class CommandBuilder {
         case "time":  return new TellTime();
         //case "off": return new ComputerOff(param);
         //case "shutdown": return new ComputerOff(param);
-        case "5": return new ComputerRstart();
+        case "res": return new ComputerRstart();
         case "open": return new OpenProgramm();
         case "cat": return new Go_Cats();
         default : return new SaySomethingElse(param);
-    }
        
+    }       
     }
-
 }
